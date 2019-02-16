@@ -1,0 +1,248 @@
+Script started on Thu 20 Apr 2017 12:58:44 PM PDT
+]0;rssoans@costello:~[01;32mrssoans@costello[01;34m ~ $[00m javac [K[K[K[K[K[Kcat ex[K[KSoans_Program2a.java[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd cs140
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m ls
+Example.class  [0m[00;32mExample.txt[0m           Soans_Program2b.java
+Example.java   Soans_Program2a.java
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m cat Soans)[K_Program2a.java
+/***************************************************************
+	* file: Soans_Program2.java
+	* author: Raoul Soans
+	* class: CS 140
+	*
+	* assignment: program 2a
+	* date last modified: 4/16/17
+	*
+	* purpose: The purpose of this program is read data from input (keyboard) representing length
+	* in miles, feet, and inches. THe program will convert this value into meters (3.3m = 1 ft)
+	* and print out the new total value converted to the nearest tenth.
+	*
+	****************************************************************/ 
+import java.util.Scanner;
+
+
+public class Soans_Program2a {
+	
+	//method: main
+	/*
+	 * The purpose of this method is to run my program
+	 * purpose: The purpose of this program is read data from input (keyboard) representing length
+	 * in miles, feet, and inches. THe program will convert this value into meters (3.3m = 1 ft)
+	 * and print out the new total value converted to the nearest tenth.
+	 * 
+	 * This method will run the whole program, and make sure it is formatted correctly as per the 
+	 * Java Style Sheet
+	 */
+	public static void main(String[] args) {
+		
+		
+		//I'm just declaring all the variables I need right now so I don't need to later.
+		double miles;
+		
+		double feet;
+		
+		double inches;
+		
+		double meters; 
+		
+		//Here I am printing the prompt for the user to input values I will need to convert to meters
+		System.out.println("Enter miles:");
+				
+			Scanner userInput = new Scanner (System.in);
+			miles = userInput.nextDouble();
+			
+		
+		System.out.println("Enter feet:");
+		
+			Scanner userInput2 = new Scanner (System.in);
+			feet = userInput2.nextDouble();
+			
+			
+		System.out.println("Enter inches:");
+		
+			Scanner userInput3 = new Scanner (System.in);
+			inches = userInput3.nextDouble();
+			
+			
+				/*this is where I am converting all my values to feet, which will then convert to
+				 * meters.
+				 * 
+				 * I am declaring new variables to represent converted values and also
+				 */
+				double convertedMiles;
+				convertedMiles = miles*5280;
+			
+				double convertedFeet;
+				convertedFeet = feet*1;
+			
+				double convertedInches;
+				convertedInches = inches/12;
+				
+		//this statement is where I add together all my converted values to reach my total in feet
+		//and then I divide by 3.3 to get to my meters, as specified in the directions
+		meters = (convertedMiles + convertedFeet + convertedInches)/3.3;
+		
+		//This statement declares a new variable that will convert from meters to a rounded version
+		//so that I can have a variable that is rounded to the nearest tenth.
+		double metersRounded = (double)Math.round((meters)*10)/10;
+		
+		
+		
+		System.out.println(miles + " mile(s), " + feet + " foot(or feet) " + inches + 
+						   " inch(es) = " + metersRounded + " meter(s).");
+		
+		userInput.close();
+		userInput2.close();
+		userInput3.close();
+		
+		
+
+	}
+
+}]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m cs[K[Kjava [Kc Soans_Program2a.java
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m java Soans_Prgr[K[Kogram2a
+Enter miles:
+1
+Enter feet:
+100
+Enter inches:
+10
+1.0 mile(s), 100.0 foot(or feet) 10.0 inch(es) = 1630.6 meter(s).
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m java Soans_Program2a
+Enter miles:
+25
+Enter feet:
+460
+Enter inches:
+6
+25.0 mile(s), 460.0 foot(or feet) 6.0 inch(es) = 40139.5 meter(s).
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m java Sopa[K[Kans_Program2a
+Enter miles:
+0
+Enter feet:
+1578
+Enter inches:
+100
+0.0 mile(s), 1578.0 foot(or feet) 100.0 inch(es) = 480.7 meter(s).
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m javac Soans_Por[K[Krogram2b.java
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m java Sopans[K[K[K[Kans_Program2b
+Enter meter(s):
+173
+173 meters will be converted into 0 mile(s), 570 foot(or feet), and 10.8 inch(es).
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m Java[K[K[K[Kjava SOans[K[K[K[Koans_Program2b
+Enter meter(s):
+3661
+3661 meters will be converted into 2 mile(s), 1521 foot(or feet), and 3.6 inch(es).
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m Soans[K[K[K[K[Kjava SO[Koans_Porogr[K[K[K[K[Krogram2b
+Enter meter(s):
+1020
+1020 meters will be converted into 0 mile(s), 3366 foot(or feet), and 0.0 inch(es).
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m java[K[K[K[Kcat SOans[K[K[K[Koans_Program2b.java
+/***************************************************************
+	* file: Soans_Program2.java
+	* author: Raoul Soans
+	* class: CS 140
+	*
+	* assignment: program 2b
+	* date last modified: 4/16/17
+	*
+	* purpose: The purpose of this program is read data from input (keyboard) representing length
+	* in meters. The program will convert this value into miles, feet, and inches, then
+	* print out the values back to the user, also rounding the remaining inches value to a tenth.
+	*
+	****************************************************************/ 
+
+import java.util.Scanner;
+
+public class Soans_Program2b {
+	
+	/* Method: Main
+	 * 
+	 * purpose: The purpose of this program is read data from input (keyboard) representing length
+	 * in meters. The program will convert this value into miles, feet, and inches, then
+	 * print out the values back to the user also rounding the remaining inches value to a tenth.
+	 */
+
+	public static void main(String[] args) {
+		
+		//declare meters for out first variable
+		int meters;
+		
+		//The first prompt to the user to enter their meters
+		System.out.println("Enter meter(s):");
+		
+			Scanner userInput = new Scanner(System.in);
+			meters = userInput.nextInt();
+			
+			
+
+		//This is the direct conversion from meters to inches, using the variable convertedInches
+		//I decided to use inches instead of feet because I thought it would be easier to use the lowest
+		//units for the backwards conversion, unlike the forward conversion in Program 2a
+			
+		double convertedInches;
+		convertedInches = (39.6 * meters);
+		
+		
+			/*
+			 * These variables are what will be printed out to the console when I run my program
+			 * The inchesRemaining will be rounded later on so I can follow the assignment specifications
+			 */
+			int milesRemaining;
+			milesRemaining = (int) (convertedInches / 63360);
+        
+        
+			int feetRemaining;
+			feetRemaining = (int) (convertedInches - milesRemaining * 63360) / 12;
+        
+        
+			double inchesRemaining;
+			inchesRemaining = convertedInches - (milesRemaining * 63360 + feetRemaining * 12);
+			
+			
+
+			
+			//This statement declares a new variable that will convert from the inches remaining
+			//to a rounded version so that I can have a variable that is rounded to the nearest tenth.
+			
+			double inchesRemainingRounded = (double) Math.round(inchesRemaining*10)/10;
+			
+			
+			System.out.println(meters + " meters will be converted into " + milesRemaining + " mile(s), " +
+			feetRemaining + " foot(or feet), and " + inchesRemainingRounded + " inch(es).");
+			
+			
+			//this method closes my scanner to prevent data leaking
+			userInput.close();
+
+			
+			
+			
+			//this is the unused older program that I did not want to use because the test cases broke down
+			//in this version of my program
+			
+			/**
+			double convertedInches;
+			convertedInches = (meters * 39.6);
+			
+			
+				int milesRemaining;
+				milesRemaining  = (int) (convertedInches / 63360);
+			
+			
+				int feetRemaining;
+				feetRemaining   = (int) (convertedInches - milesRemaining * 63360) / 12;
+			
+			
+				double inchesRemaining;
+				inchesRemaining = convertedInches - (milesRemaining * 63660 + feetRemaining * 12);
+			
+		*/
+				
+			
+	}
+
+}
+]0;rssoans@costello:~/cs140[01;32mrssoans@costello[01;34m ~/cs140 $[00m exit
+exit
+
+Script done on Thu 20 Apr 2017 01:03:10 PM PDT
